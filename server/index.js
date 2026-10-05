@@ -8,8 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const JWT_SECRET = process.env.JWT_SECRET;
-const PORT = process.env.PORT;
+const JWT_SECRET = process.env.JWT_SECRET || 'DEFAULT_SECRET_KEY';
+const PORT = process.env.PORT || 5000;
 
 // In-memory "database" with one demo user so reviewers can log in instantly
 const users = [
